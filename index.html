@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>js task</title>
+  <head>
+    <body>
+      <script>
+/*solution to question one*/
+function convertFahrToCelsius(temperature) {
+  let value = typeof temperature /*type of checks the type of value temperature is */
+  if (value !== 'number') {
+    console.log(temperature + ' is not a number but  ' + value )
+  }else{
+    let celsius = (temperature-32)*5/9;
+    let result = celsius.toFixed(4);
+    console.log(result + '° celsius');
+  }
+  
+};
+
+convertFahrToCelsius('testrun');
+convertFahrToCelsius([]);
+convertFahrToCelsius(undefined);
+convertFahrToCelsius(98);
+
+/*solution to question 2*/
+
+function checkYuGiOh(n){
+  let values = typeof n;
+  if(values !== 'number') {
+     console.log(n + ' is not a number but  ' + values );
+  }else{
+    var myArray = [];
+    for (i = 1; i <= n; i++){
+      myArray.push(i)
+    };
+    for (i = 0; i< myArray.length; i++){
+      if (myArray[i]%2 === 0 && myArray[i]%3 === 0) {
+        myArray[i] = "yu-gi";
+      }else{
+          if (myArray[i]%2 === 0 && myArray[i]%5 === 0) {
+        myArray[i] = "yu-oh";
+        }else{
+          if (myArray[i]%3 === 0 && myArray[i]%5 === 0) {
+        myArray[i] = "gi-oh";
+        }else{
+          if (myArray[i]%2 === 0 && myArray[i]%3 === 0 && myArray[i]%5 === 0) {
+        myArray[i] = "yu-gi-oh";
+
+        }else{
+        if (myArray[i]%2 === 0) {
+        myArray[i] = "yu";
+
+        }else{
+        if (myArray[i]%3 === 0) {
+        myArray[i] = "gi";
+        }else{
+          if (myArray[i]%5 === 0) {
+            myArray[i] = "oh"
+          };
+        };
+
+        };
+        };
+        };
+        }; 
+    };
+    };
+    console.log(myArray)
+  };
+};
+
+checkYuGiOh("hello")
+checkYuGiOh(100)
+      </script>
+    </body>
+</html>
